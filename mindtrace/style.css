@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: min(700px, 90%);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #333;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 72px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    background: #0d0d0d;
+    border: 1px solid #292929;
+    border-radius: 16px;
+    padding: 20px;
+    color: white;
+    font-size: 17px;
+    outline: none;
+    margin-bottom: 16px;
+}
+
+textarea:focus {
+    border-color: #666;
+}
+
+textarea::placeholder {
+    color: #555;
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+    padding: 17px;
+    background: white;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.result {
+    margin-top: 45px;
+    padding: 30px;
+    background: #0d0d0d;
+    border: 1px solid #222;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.result h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.score {
+    display: grid;
+    grid-template-columns: 110px 1fr 40px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.bar {
+    height: 8px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    width: 0%;
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    transition: width 1s ease;
+}
+
+.score strong {
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .score {
+        grid-template-columns: 90px 1fr 35px;
+    }
+}

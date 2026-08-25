@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindTrace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="badge">MINDTRACE</div>
+
+        <h1>See how your mind<br>makes decisions</h1>
+
+        <p class="subtitle">
+            Enter a decision. MindTrace turns it into a visual profile.
+        </p>
+
+        <textarea
+            id="decision"
+            placeholder="Write a decision you're thinking about..."
+        ></textarea>
+
+        <button id="analyzeBtn">
+            Analyze My Decision
+        </button>
+
+        <section id="result" class="result hidden">
+
+            <h2>Your Decision Profile</h2>
+
+            <div class="score">
+                <span>AMBITION</span>
+                <div class="bar">
+                    <div id="ambitionBar"></div>
+                </div>
+                <strong id="ambitionScore">0</strong>
+            </div>
+
+            <div class="score">
+                <span>CURIOSITY</span>
+                <div class="bar">
+                    <div id="curiosityBar"></div>
+                </div>
+                <strong id="curiosityScore">0</strong>
+            </div>
+
+            <div class="score">
+                <span>RISK</span>
+                <div class="bar">
+                    <div id="riskBar"></div>
+                </div>
+                <strong id="riskScore">0</strong>
+            </div>
+
+            <div class="score">
+                <span>CONFIDENCE</span>
+                <div class="bar">
+                    <div id="confidenceBar"></div>
+                </div>
+                <strong id="confidenceScore">0</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
